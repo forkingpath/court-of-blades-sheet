@@ -64,7 +64,8 @@ Object.keys(data.playbook).forEach(playbook => {
 	else data.playbook[playbook].friend = [];
 	data.playbook[playbook].ability = data.playbook[playbook].ability.map(name => ({
 		name: getTranslation(`playbook_ability_${name}`),
-		description: getTranslation(`playbook_ability_${name}_description`)
+		description: getTranslation(`playbook_ability_${name}_description`),
+		activated: base.activated_ability == `playbook_ability_${name}` ? true : false
 	}));
 	data.playbook[playbook].playbookitem.forEach(item => {
 		item.name = getTranslation(item.name);
@@ -72,6 +73,13 @@ Object.keys(data.playbook).forEach(playbook => {
 			item.description = getTranslationByKey(item.description) || "";
 		}
 		item.boxes_chosen = "1";
+	});
+	data.playbook[playbook].permissionitem.forEach(permission => {
+		permission.name = getTranslation(permission.name);
+		if (permission.description) {
+			permission.description = getTranslationByKey(permission.description) || "";
+		}
+		permission.boxes_chosen = "1";
 	});
 });
 const playbookAbilityMap = new Map([...Object.values(data.playbook).map(x => x.ability).reduce((m, v) => {
@@ -253,6 +261,7 @@ const crewAttributes = [...new Set([].concat(...Object.keys(data.crew).map(x => 
 		"repeating_ability:description",
 		"repeating_crewability:name",
 		"repeating_crewability:description",
+		"repeating_permissionitem:name",
 		"repeating_playbookitem:name",
 		"repeating_upgrade:name",
 		"repeating_friend:name",
@@ -282,6 +291,7 @@ const crewAttributes = [...new Set([].concat(...Object.keys(data.crew).map(x => 
 		"friend",
 		"contact",
 		"playbookitem",
+		"permissionitem",
 		"upgrade"
 	],
 	spiritPlaybooks = ["ghost", "hull", "vampire"],
@@ -327,6 +337,7 @@ on("change:crew_type change:playbook", event => {
 			fillRepeatingSectionFromData("friend", data.playbook[sourceName].friend, true);
 			fillRepeatingSectionFromData("ability", data.playbook[sourceName].ability, true);
 			fillRepeatingSectionFromData("playbookitem", data.playbook[sourceName].playbookitem, true);
+			fillRepeatingSectionFromData("permissionitem", data.playbook[sourceName].permissionitem, true);
 			fillBaseData(data.playbook[sourceName].base, playbookAttributes);
 			if (sourceName === "leech") fillRepeatingSectionFromData("alchemical", data.alchemicals);
 		}
@@ -374,6 +385,9 @@ watchedAttributes.forEach(name => {
 		}
 	});
 });
+
+// TODO: Watch special ability rows for relevant triggers and set attrs to change roll flow to include those questions
+
 /* Register attribute/action event handlers */
 Object.keys(data.actions).forEach(attrName => {
 	on([...data.actions[attrName], `setting_resbonus_${attrName}`]
@@ -440,7 +454,7 @@ on("change:char_cohort_quality change:char_cohort_impaired change:setting_show_c
 handleBoxesFill("upgrade_24_check_", true);
 handleBoxesFill("bandolier1_check_");
 handleBoxesFill("bandolier2_check_");
-["item", "playbookitem", "upgrade"].forEach(sName => handleBoxesFill(`repeating_${sName}:check_`));
+["item", "playbookitem", "permissionitem", "upgrade"].forEach(sName => handleBoxesFill(`repeating_${sName}:check_`));
 /* Pseudo-radios */
 ["crew_tier", ...actionsFlat].forEach(name => {
 	on(`change:${name}`, event => {
@@ -466,7 +480,25 @@ on("change:reset_items", () => {
 		});
 	};
 	setAttr("load", 0);
-	["item", "playbookitem"].forEach(clearChecks);
+	["item", "playbookitem","permissionitem"].forEach(clearChecks);
+});
+/* Special permission reset button */
+on("change:reset_permissions", () => {
+	const clearChecks = sectionName => {
+		getSectionIDs(`repeating_${sectionName}`, idArray => {
+			const setting = [
+				...idArray.map(id => `repeating_${sectionName}_${id}_check_1`),
+				...idArray.map(id => `repeating_${sectionName}_${id}_check_2`),
+				...idArray.map(id => `repeating_${sectionName}_${id}_check_3`)
+			].reduce((m, name) => {
+				m[name] = 0;
+				return m;
+			}, {});
+			mySetAttrs(setting);
+		});
+	};
+	setAttr("load", 0);
+	["permission","permissionitem"].forEach(clearChecks);
 });
 /* Default values for number of upgrades boxes — probably not necessary anymore */
 // on('change:repeating_upgrade:boxes_chosen', () => {

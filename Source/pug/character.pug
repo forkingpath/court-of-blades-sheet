@@ -136,7 +136,7 @@
 				.armor.col55
 					.blackheader.col100
 						.label(data-i18n='armor_uses')
-					each val in ['armor', '+heavy', 'special']
+					each val in ['armor', 'special']
 						label
 							+checkbox(val.replace('+', '')).checkbox.squarebox
 							span.label(data-i18n=val)
@@ -233,6 +233,7 @@
 								+checkbox(`stricture_${name}`).checkbox.squarebox
 								span.label(data-i18n=name)
 							span(data-i18n=`strictures_${name}`)
+		+textarea('paramour')(data-i18n-placeholder='paramour').lovenotes
 	// Right column
 	.col45.flex-wrap.right-column
 		// Playbook name and description
@@ -254,6 +255,34 @@
 						+checkbox('load')(value=val).checkbox
 						span.loadnumber(name=`attr_setting_load_${val[0]}`)
 						span(data-i18n=val)
+			.specialpermissionsheader.small-margin.col100.flex
+				.label(data-i18n='special_permission')
+				label.text-button
+					+checkbox('reset_permissions')(data-i18n='reset?')
+			.itemholder.col100.items
+				// Special Permissions
+				.specialpermissions.col100.free-repcontrol
+					fieldset.repeating_permissionitem
+						+hidden-input('boxes_chosen')(value='0').boxes-chosen
+						.permission.numboxes-chooser
+							div(data-i18n='how_much_load')
+							+number-input('numboxes')(min='0', max='3', value='0')
+							label
+								+checkbox('bold')(data-i18n='bold')
+							label
+								+checkbox('boxes_chosen')(data-i18n='ok')
+						.permission
+							+hidden-input('bold')(value='0').input-bold
+							+hidden-input('numboxes')(value='0').numboxes
+							+checkbox('check_1').checkbox.squarebox
+							span.floatingbar.boxesgeq2
+							+checkbox('check_2', 'boxesgeq2').checkbox.squarebox
+							span.floatingbar.boxesgeq3.boxesgeq2
+							+checkbox('check_3', 'boxesgeq2 boxesgeq3').checkbox.squarebox
+							+autoexpand('name')(data-i18n-placeholder='item_name').itemname
+						.permission-description
+							+checkbox('expand').expand
+							+textarea('description')(data-i18n-placeholder='description')
 			.itemheader.small-margin.col100.flex
 				.label(data-i18n='items')
 				span.italic(data-i18n='italics_dont_count')

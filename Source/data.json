@@ -442,7 +442,8 @@
 			}, {
 				"name": "playbook_item_spiritbane_charm",
 				"numboxes": "0"
-			}]
+			}],
+			"permissionitem": []
 		},
 		"ghost": {
 			"ability": ["ghost_form", "dissipate", "manifest", "poltergeist", "possess", "veteran"],
@@ -463,7 +464,8 @@
 				"xp_condition2": "playbook_ghost_xp_condition2",
 				"xp_condition3": "playbook_ghost_xp_condition3"
 			},
-			"playbookitem": []
+			"playbookitem": [],
+			"permissionitem": []
 		},
 		"hound": {
 			"ability": ["sharpshooter", "focused", "ghost_hunter", "scout", "survivor", "tough_as_nails", "vengeful", "veteran"],
@@ -503,7 +505,8 @@
 			}, {
 				"name": "playbook_item_spiritbane_charm",
 				"numboxes": "0"
-			}]
+			}],
+			"permissionitem": []
 		},
 		"hull": {
 			"ability": ["automaton", "overcharge", "compartments", "electroplasmic_projectors", "interface", "secondary_hull", "frame_upgrade"],
@@ -526,7 +529,8 @@
 				"xp_condition2": "playbook_hull_xp_condition2",
 				"xp_condition3": "playbook_hull_xp_condition3"
 			},
-			"playbookitem": []
+			"playbookitem": [],
+			"permissionitem": []
 		},
 		"leech": {
 			"ability": ["alchemist", "analyst", "artificer", "fortitude", "ghost_ward", "physicker", "saboteur", "venomous", "veteran"],
@@ -563,13 +567,14 @@
 			}, {
 				"name": "playbook_item_gadget",
 				"numboxes": "1"
-			}]
+			}],
+			"permissionitem": []
 		},
 		"lurk": {
 			"ability": ["infiltrator", "ambush", "daredevil", "the_devil's_footsteps", "expertise", "ghost_veil", "reflexes", "shadow", "veteran"],
 			"base": {
 				"friends_title": "playbook_lurk_friends_title",
-				"finesse": "1",
+				"maneuver": "1",
 				"gatherinfo1": "gatherinfo_what_do_they_intend",
 				"gatherinfo2": "gatherinfo_how_can_I_get_them",
 				"gatherinfo3": "gatherinfo_what_should_I_look",
@@ -577,7 +582,7 @@
 				"gatherinfo5": "gatherinfo_where_can_I_hide",
 				"gatherinfo6": "gatherinfo_how_can_I_find",
 				"playbook_description": "playbook_lurk_description",
-				"prowl": "2",
+				"skulk": "2",
 				"xp_condition": "playbook_lurk_xp_condition"
 			},
 			"playbookitem": [{
@@ -600,7 +605,8 @@
 			}, {
 				"name": "playbook_item_spiritbane_charm",
 				"numboxes": "0"
-			}]
+			}],
+			"permissionitem": []
 		},
 		"slide": {
 			"ability": ["rook's_gambit", "cloak_&_dagger", "ghost_voice", "like_looking_into_a_mirror", "a_little_something_on_the_side", "mesmerism", "subterfuge", "trust_in_me", "veteran"],
@@ -638,7 +644,8 @@
 			}, {
 				"name": "playbook_item_spiritbane_charm",
 				"numboxes": "0"
-			}]
+			}],
+			"permissionitem": []
 		},
 		"spider": {
 			"ability": ["foresight", "calculating", "connected", "functioning_vice", "ghost_contract", "jail_bird", "mastermind", "weaving_the_web", "veteran"],
@@ -675,12 +682,13 @@
 			}, {
 				"name": "playbook_item_spiritbane_charm",
 				"numboxes": "0"
-			}]
+			}],
+			"permissionitem": []
 		},
 		"whisper": {
 			"ability": ["compel", "ghost_mind", "iron_will", "occultist", "ritual", "strange_methods", "tempest", "warded"],
 			"base": {
-				"attune": "2",
+				"channel": "2",
 				"friends_title": "playbook_whisper_friends_title",
 				"gatherinfo1": "gatherinfo_what_is_arcane",
 				"gatherinfo2": "gatherinfo_what_echoes",
@@ -712,7 +720,8 @@
 			}, {
 				"name": "playbook_item_demonbane_charm",
 				"numboxes": "0"
-			}]
+			}],
+			"permissionitem": []
 		},
 		"vampire": {
 			"ability": ["undead", "terrible_power", "arcane_sight", "a_void_in_the_echo", "dark_talent", "sinister_guile", "veteran"],
@@ -751,138 +760,329 @@
 			}, {
 				"name": "playbook_item_spiritbane_charm",
 				"numboxes": "0"
+			}],
+			"permissionitem": []
+		},
+		"bravo": {
+			"ability": ["bravo_special_armor", "house_guard", "bloody_but_unbowed", "unstoppable", "honor_guard", "upon_a_needle", "gap_in_the_armor", "veteran"],
+			"base": {
+				"maneuver": "1",
+				"skirmish": "2",
+				"friends_title": "playbook_bravo_friends_title",
+				"gatherinfo1": "gatherinfo_how_can_I_hurt",
+				"gatherinfo2": "gatherinfo_what_do_they_want",
+				"gatherinfo3": "gatherinfo_whos_most_dangerous",
+				"gatherinfo4": "gatherinfo_what_do_they_intend",
+				"gatherinfo5": "gatherinfo_how_can_I_get_them",
+				"gatherinfo6": "gatherinfo_are_they_telling",
+				"playbook_description": "playbook_bravo_description",
+				"xp_condition": "playbook_bravo_xp_condition",
+				"activated_ability": "bravo_special_armor"
+			},
+			"playbookitem": [{
+				"bold": "1",
+				"name": "playbook_item_fine_courtly_blade",
+				"description": "playbook_item_fine_courtly_blade_description",
+				"numboxes": "0"
+			}, {
+				"bold": "1",
+				"name": "playbook_item_fine_deadly_blade",
+				"description": "playbook_item_fine_deadly_blade_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_a_duelists_gauntlet",
+				"description": "playbook_item_a_duelists_gauntlet_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_a_badge_of_honor",
+				"description": "playbook_item_a_badge_of_honor_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_a_courtly_favor",
+				"description": "playbook_item_a_courtly_favor_description",
+				"numboxes": "0"
+			}],
+			"permissionitem": [{
+				"name": "playbook_permission_a_fine_wit",
+				"description": "playbook_permission_a_fine_wit_description",
+				"numboxes": "0"
+			}]
+		},
+		"hawk": {
+			"ability": ["hawk_special_armor", "terrifying", "predator", "sharpshooter", "triage", "call_the_target", "baited_and_set", "leave_no_ground", "veteran"],
+			"base": {
+				"command": "1",
+				"hunt": "2",
+				"friends_title": "playbook_hawk_friends_title",
+				"gatherinfo1": "gatherinfo_how_can_i_stop",
+				"gatherinfo2": "gatherinfo_what_is_hidden",
+				"gatherinfo3": "gatherinfo_who_is_most_afraid",
+				"gatherinfo4": "gatherinfo_what_do_they_intend",
+				"gatherinfo5": "gatherinfo_how_can_I_get_them",
+				"gatherinfo6": "gatherinfo_are_they_telling",
+				"playbook_description": "playbook_hawk_description",
+				"xp_condition": "playbook_hawk_xp_condition",
+				"activated_ability": "hawk_special_armor"
+			},
+			"playbookitem": [{
+				"bold": "1",
+				"name": "playbook_item_fine_ranged_weapon",
+				"description": "playbook_item_fine_courtly_blade_description",
+				"numboxes": "0"
+			}, {
+				"bold": "1",
+				"name": "playbook_item_fine_heavy_cloak",
+				"description": "playbook_item_fine_deadly_blade_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_handy_restraint",
+				"description": "playbook_item_a_duelists_gauntlet_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_hunting_companion",
+				"description": "playbook_item_a_badge_of_honor_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_fine_spyglass",
+				"description": "playbook_item_a_courtly_favor_description",
+				"numboxes": "0"
+			}],
+			"permissionitem": [{
+				"name": "playbook_permission_a_fine_iron_nerve",
+				"description": "playbook_permission_a_fine_iron_nerve_description",
+				"numboxes": "0"
+			}]
+		},
+		"eye": {
+			"ability": ["eye_special_armor", "better_lucky", "like_water", "infiltrator", "shadow", "in_my_shadow", "saboteur", "artful_trespass", "veteran"],
+			"base": {
+				"survey": "1",
+				"skulk": "2",
+				"friends_title": "playbook_eye_friends_title",
+				"gatherinfo1": "gatherinfo_what_should_I_look",
+				"gatherinfo2": "gatherinfo_where_can_I_hide",
+				"gatherinfo3": "gatherinfo_whats_the_best_way",
+				"gatherinfo4": "gatherinfo_what_do_they_intend",
+				"gatherinfo5": "gatherinfo_how_can_I_get_them",
+				"gatherinfo6": "gatherinfo_are_they_telling",
+				"playbook_description": "playbook_eye_description",
+				"xp_condition": "playbook_eye_xp_condition",
+				"activated_ability": "eye_special_armor"
+			},
+			"playbookitem": [{
+				"bold": "1",
+				"name": "playbook_item_fine_disguise",
+				"description": "playbook_item_fine_disguise_description",
+				"numboxes": "0"
+			}, {
+				"bold": "1",
+				"name": "playbook_item_fine_lockpicks",
+				"description": "playbook_item_fine_lockpicks",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_polished_mirror",
+				"description": "playbook_item_polished_mirror_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_fine_cover_identity",
+				"description": "playbook_item_fine_cover_identity_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_vial_of_sweetsleep",
+				"description": "playbook_item_vial_of_sweetsleep_description",
+				"numboxes": "0"
+			}],
+			"permissionitem": [{
+				"name": "playbook_permission_a_fine_photographic_memory",
+				"description": "playbook_permission_a_fine_photographic_memory_description",
+				"numboxes": "0"
+			}]
+		},
+		"knack": {
+			"ability": ["knack_special_armor", "invocation", "rend_the_weave", "the_olde_tongue", "open_mind", "scrying", "fascinate", "pry", "veteran"],
+			"base": {
+				"study": "1",
+				"channel": "2",
+				"friends_title": "playbook_knack_friends_title",
+				"gatherinfo1": "gatherinfo_what_echoes_in_the_weave",
+				"gatherinfo2": "gatherinfo_what_is_arcane",
+				"gatherinfo3": "gatherinfo_what_is_hidden",
+				"gatherinfo4": "gatherinfo_what_do_they_intend",
+				"gatherinfo5": "gatherinfo_how_can_I_get_them",
+				"gatherinfo6": "gatherinfo_are_they_telling",
+				"playbook_description": "playbook_knack_description",
+				"xp_condition": "playbook_knack_xp_condition",
+				"activated_ability": "knack_special_armor"
+			},
+			"playbookitem": [{
+				"bold": "1",
+				"name": "playbook_item_fine_arcane_focus",
+				"description": "playbook_item_fine_arcane_focus_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_an_impressive_costume",
+				"description": "playbook_item_an_impressive_costume_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_ritual_implements",
+				"description": "playbook_item_ritual_implements_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_a_familiar_spirit",
+				"description": "playbook_item_a_familiar_spirit_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_the_ladys_kiss",
+				"description": "playbook_item_the_ladys_kiss_description",
+				"numboxes": "0"
+			}],
+			"permissionitem": [{
+				"name": "playbook_permission_a_vulgar_display_of_power",
+				"description": "playbook_permission_a_vulgar_display_of_power_description",
+				"numboxes": "0"
+			}]
+		},
+		"key": {
+			"ability": ["key_special_armor", "skeleton_key", "expertise", "i_know_this_tune", "foresight", "under_the_rug", "a_good_name", "attention_to_detail", "veteran"],
+			"base": {
+				"tinker": "1",
+				"sway": "2",
+				"friends_title": "playbook_key_friends_title",
+				"gatherinfo1": "gatherinfo_how_can_I_hurt",
+				"gatherinfo2": "gatherinfo_what_do_they_want",
+				"gatherinfo3": "gatherinfo_whos_most_dangerous",
+				"gatherinfo4": "gatherinfo_what_do_they_intend",
+				"gatherinfo5": "gatherinfo_how_can_I_get_them",
+				"gatherinfo6": "gatherinfo_are_they_telling",
+				"playbook_description": "playbook_key_description",
+				"xp_condition": "playbook_key_xp_condition",
+				"activated_ability": "key_special_armor"
+			},
+			"playbookitem": [{
+				"bold": "1",
+				"name": "playbook_item_fine_tinkering_tools",
+				"description": "playbook_item_fine_tinkering_tools_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_a_concealable_weapon",
+				"description": "playbook_item_a_concealable_weapon_description",
+				"numboxes": "1"
+			}, {
+				"bold": "1",
+				"name": "playbook_item_fine_courtly_clothes",
+				"description": "playbook_item_fine_courtly_clothes_description",
+				"numboxes": "1"
+			}, {
+				"bold": "1",
+				"name": "playbook_item_a_fine_invitation",
+				"description": "playbook_item_a_fine_invitation_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_a_small_pricey_gift",
+				"description": "playbook_item_a_small_pricey_gift_description",
+				"numboxes": "0"
+			}],
+			"permissionitem": [{
+				"name": "playbook_permission_a_believable_excuse",
+				"description": "playbook_permission_a_believable_excuse_description",
+				"numboxes": "0"
+			}]
+		},
+		"couth": {
+			"ability": ["couth_special_armor", "party_crasher", "the_lords_charm", "dont_make_me", "better_to_be_a_tiger", "vengeful", "living_the_dream", "bad_reputation", "veteran"],
+			"base": {
+				"study": "1",
+				"channel": "2",
+				"friends_title": "playbook_couth_friends_title",
+				"gatherinfo1": "gatherinfo_wheres_the_leverage",
+				"gatherinfo2": "gatherinfo_what_is_out_of_place",
+				"gatherinfo3": "gatherinfo_what_might_happen",
+				"gatherinfo4": "gatherinfo_what_do_they_intend",
+				"gatherinfo5": "gatherinfo_how_can_I_get_them",
+				"gatherinfo6": "gatherinfo_are_they_telling",
+				"playbook_description": "playbook_couth_description",
+				"xp_condition": "playbook_couth_xp_condition",
+				"activated_ability": "couth_special_armor"
+			},
+			"playbookitem": [{
+				"name": "playbook_item_a_frightening_weapon",
+				"description": "playbook_item_a_frightening_weapon_description",
+				"numboxes": "1"
+			}, {
+				"bold": "1",
+				"name": "playbook_item_fine_wrecking_tools",
+				"description": "playbook_item_fine_wrecking_tools_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_something_destructive",
+				"description": "playbook_item_something_destructive_description",
+				"numboxes": "1"
+			}, {
+				"bold": "1",
+				"name": "playbook_item_fine_inebriants",
+				"description": "playbook_item_fine_inebriants_description",
+				"numboxes": "0"
+			}, {
+				"bold": "1",
+				"name": "playbook_item_a_fine_bit_of_blackmail",
+				"description": "playbook_item_a_fine_bit_of_blackmail_description",
+				"numboxes": "0"
+			}],
+			"permissionitem": [{
+				"name": "playbook_permission_a_lucky_break",
+				"description": "playbook_permission_a_lucky_break_description",
+				"numboxes": "0"
 			}]
 		}
 	},
 	"factions": {
 		"factions1": [{
-			"name": "faction_the_unseen",
-			"tier": "IV",
-			"hold": "S"
-		}, {
-			"name": "faction_the_hive",
-			"tier": "IV",
-			"hold": "S"
-		}, {
-			"name": "faction_the_circle_of_flame",
-			"tier": "III",
-			"hold": "S"
-		}, {
-			"name": "faction_the_silver_nails",
-			"tier": "III",
-			"hold": "S"
-		}, {
-			"name": "faction_lord_scurlock",
-			"tier": "III",
-			"hold": "S"
-		}, {
-			"name": "faction_the_crows",
-			"tier": "II",
-			"hold": "W"
-		}, {
-			"name": "faction_the_lampblacks",
-			"tier": "II",
-			"hold": "W"
-		}, {
-			"name": "faction_the_red_sashes",
-			"tier": "II",
-			"hold": "W"
-		}, {
-			"name": "faction_the_dimmer_sisters",
-			"tier": "II",
-			"hold": "S"
-		}, {
-			"name": "faction_the_grinders",
-			"tier": "II",
-			"hold": "W"
-		}, {
-			"name": "faction_the_billhooks",
-			"tier": "II",
-			"hold": "W"
-		}, {
-			"name": "faction_the_wraiths",
-			"tier": "II",
-			"hold": "W"
-		}, {
-			"name": "faction_the_gray_cloaks",
-			"tier": "II",
-			"hold": "S"
-		}, {
-			"name": "faction_ulf_ironborn",
-			"tier": "I",
-			"hold": "S"
-		}, {
-			"name": "faction_the_foghounds",
-			"tier": "I",
-			"hold": "W"
-		}, {
-			"name": "faction_the_lost",
-			"tier": "I",
-			"hold": "W"
-		}],
-		"factions2": [{
-			"name": "faction_imperial_military",
+			"name": "faction_grand_council",
 			"tier": "VI",
 			"hold": "S"
 		}, {
-			"name": "faction_city_council",
-			"tier": "V",
-			"hold": "S"
+			"name": "faction_corvetto",
+			"tier": "",
+			"hold": ""
 		}, {
-			"name": "faction_ministry_of_preservation",
-			"tier": "V",
-			"hold": "S"
+			"name": "faction_battalia",
+			"tier": "",
+			"hold": ""
 		}, {
-			"name": "faction_leviathan_hunters",
-			"tier": "V",
-			"hold": "S"
+			"name": "faction_bastien",
+			"tier": "",
+			"hold": ""
 		}, {
-			"name": "faction_ironhook_prison",
-			"tier": "IV",
-			"hold": "S"
+			"name": "faction_lovell",
+			"tier": "",
+			"hold": ""
 		}, {
-			"name": "faction_sparkwrights",
-			"tier": "IV",
-			"hold": "S"
+			"name": "faction_al_mari",
+			"tier": "",
+			"hold": ""
 		}, {
-			"name": "faction_spirit_wardens",
-			"tier": "IV",
-			"hold": "S"
-		}, {
-			"name": "faction_bluecoats",
-			"tier": "III",
-			"hold": "S"
-		}, {
-			"name": "faction_inspectors",
-			"tier": "III",
-			"hold": "S"
-		}, {
-			"name": "faction_iruvian_consulate",
-			"tier": "III",
-			"hold": "S"
-		}, {
-			"name": "faction_skovlan_consulate",
-			"tier": "III",
-			"hold": "W"
-		}, {
-			"name": "faction_the_brigade",
-			"tier": "II",
-			"hold": "S"
-		}, {
-			"name": "faction_severosi_consulate",
-			"tier": "I",
-			"hold": "S"
-		}, {
-			"name": "faction_dagger_isles_consulate",
-			"tier": "I",
-			"hold": "S"
+			"name": "faction_elanda",
+			"tier": "",
+			"hold": ""
 		}],
-		"factions3": [{
-			"name": "faction_the_foundation",
+		"factions2": [{
+			"name": "faction_bank",
+			"tier": "V",
+			"hold": "S"
+		}, {
+			"name": "faction_trade_federation",
 			"tier": "IV",
 			"hold": "S"
 		}, {
-			"name": "faction_dockers",
+			"name": "faction_first_court",
+			"tier": "IV",
+			"hold": "S"
+		}, {
+			"name": "faction_scholam_naturalis",
+			"tier": "III",
+			"hold": "S"
+		}, {
+			"name": "faction_graces",
 			"tier": "III",
 			"hold": "S"
 		}, {
@@ -890,128 +1090,125 @@
 			"tier": "III",
 			"hold": "S"
 		}, {
-			"name": "faction_sailors",
+			"name": "faction_signora",
 			"tier": "III",
-			"hold": "W"
+			"hold": "S"
 		}, {
-			"name": "faction_laborers",
+			"name": "faction_city_watch",
 			"tier": "III",
-			"hold": "W"
+			"hold": "S"
 		}, {
-			"name": "faction_cabbies",
-			"tier": "II",
-			"hold": "W"
+			"name": "faction_dockers",
+			"tier": "III",
+			"hold": "S"
 		}, {
-			"name": "faction_cyphers",
+			"name": "faction_bakers_guild",
 			"tier": "II",
 			"hold": "S"
 		}, {
-			"name": "faction_ink_rakes",
+			"name": "faction_arborist_guild",
+			"tier": "II",
+			"hold": "S"
+		}, {
+			"name": "faction_broadsheets",
+			"tier": "II",
+			"hold": "S"
+		}, {
+			"name": "faction_ironmongers",
+			"tier": "I",
+			"hold": "S"
+		}],
+		"factions3": [{
+			"name": "faction_prince_of_tatters",
+			"tier": "IV",
+			"hold": "S"
+		}, {
+			"name": "faction_brizolatto_family",
+			"tier": "IV",
+			"hold": "S"
+		}, {
+			"name": "faction_rignolles_rovers",
+			"tier": "III",
+			"hold": "S"
+		}, {
+			"name": "faction_ten_hammer_regulars",
+			"tier": "III",
+			"hold": "W"
+		}, {
+			"name": "faction_founder",
+			"tier": "III",
+			"hold": "W"
+		}, {
+			"name": "faction_unburnt",
 			"tier": "II",
 			"hold": "W"
 		}, {
-			"name": "faction_rail_jacks",
+			"name": "faction_blue_devils",
 			"tier": "II",
+			"hold": "S"
+		}, {
+			"name": "faction_twistjacks",
+			"tier": "I",
 			"hold": "W"
 		}, {
-			"name": "faction_servants",
-			"tier": "II",
+			"name": "faction_motley",
+			"tier": "I",
 			"hold": "W"
 		}],
 		"factions4": [{
-			"name": "faction_the_church_of_ecstasy",
+			"name": "faction_sevenfold_veils",
 			"tier": "IV",
 			"hold": "S"
 		}, {
-			"name": "faction_the_horde",
+			"name": "faction_mercies",
 			"tier": "III",
 			"hold": "S"
 		}, {
-			"name": "faction_the_path_of_echoes",
-			"tier": "III",
-			"hold": "S"
-		}, {
-			"name": "faction_the_forgotten_gods",
-			"tier": "III",
-			"hold": "W"
-		}, {
-			"name": "faction_the_reconciled",
-			"tier": "III",
-			"hold": "S"
-		}, {
-			"name": "faction_skovlander_refugees",
-			"tier": "III",
-			"hold": "W"
-		}, {
-			"name": "faction_the_weeping_lady",
+			"name": "faction_dead_watchers",
 			"tier": "II",
 			"hold": "S"
 		}, {
-			"name": "faction_deathlands_scavengers",
-			"tier": "II",
-			"hold": "W"
-		}],
-		"factions5": [{
-			"name": "faction_whitecrown",
-			"tier": "V",
-			"hold": "S"
-		}, {
-			"name": "faction_brightstone",
-			"tier": "IV",
-			"hold": "S"
-		}, {
-			"name": "faction_charterhall",
-			"tier": "IV",
-			"hold": "S"
-		}, {
-			"name": "faction_six_towers",
-			"tier": "III",
-			"hold": "W"
-		}, {
-			"name": "faction_silkshore",
-			"tier": "II",
-			"hold": "S"
-		}, {
-			"name": "faction_nightmarket",
-			"tier": "II",
-			"hold": "S"
-		}, {
-			"name": "faction_crow's_foot",
-			"tier": "II",
-			"hold": "S"
-		}, {
-			"name": "faction_the_docks",
-			"tier": "II",
-			"hold": "S"
-		}, {
-			"name": "faction_barrowcleft",
-			"tier": "II",
-			"hold": "S"
-		}, {
-			"name": "faction_coalridge",
+			"name": "faction_college_of_satire",
 			"tier": "II",
 			"hold": "W"
 		}, {
-			"name": "faction_charhollow",
-			"tier": "I",
+			"name": "faction_buskin",
+			"tier": "II",
 			"hold": "S"
 		}, {
-			"name": "faction_dunslough",
+			"name": "faction_tramps",
 			"tier": "I",
 			"hold": "W"
+		}, {
+			"name": "faction_soraya",
+			"tier": "I",
+			"hold": "S"
 		}]
 	},
 	"actions": {
-		"insight": ["hunt", "study", "survey", "tinker"],
-		"prowess": ["finesse", "prowl", "skirmish", "wreck"],
-		"resolve": ["attune", "command", "consort", "sway"]
+		"body": ["skulk", "maneuver", "skirmish", "wreck"],
+		"mind": ["tinker", "study", "survey", "hunt"],
+		"spirit": ["channel", "command", "consort", "sway"]
 	},
 	"traumas": {
-		"normal": ["cold", "haunted", "obsessed", "paranoid", "reckless", "soft", "unstable", "vicious"],
+		"normal": ["sentimental", "wicked", "grasping", "false", "gauche", "jealous", "faithless", "fragile"],
 		"ghost": ["chaotic", "destructive", "furious", "obsessive", "territorial", "savage"],
 		"hull": ["clanking", "leaking", "fixated", "smoking", "sparking", "unstable"]
 	},
 	"items": [{
+		"name": "luck_charm",
+		"description": "luck_charm_description",
+		"numboxes": "0"
+	}, {
+		"name": "flint_and_steel",
+		"description": "flint_and_steel_description",
+		"numboxes": "0"
+	},{
+		"name": "armor",
+		"description": "armor_description",
+		"numboxes": "2",
+		"short": "1"
+	},{
 		"name": "a_blade_or_two",
 		"description": "a_blade_or_two_description",
 		"numboxes": "1"
@@ -1022,50 +1219,18 @@
 	}, {
 		"name": "a_pistol",
 		"description": "a_pistol_description",
-		"numboxes": "1",
-		"short": "1"
-	}, {
-		"name": "a_2nd_pistol",
-		"description": "a_pistol_description",
-		"numboxes": "1",
-		"short": "1"
+		"numboxes": "1"
 	}, {
 		"name": "a_large_weapon",
 		"description": "a_large_weapon_description",
 		"numboxes": "2"
 	}, {
-		"name": "an_unusual_weapon",
-		"description": "an_unusual_weapon_description",
+		"name": "lantern",
+		"description": "lantern_description",
 		"numboxes": "1"
-	}, {
-		"name": "armor",
-		"description": "armor_description",
-		"numboxes": "2",
-		"short": "1"
-	}, {
-		"name": "+heavy",
-		"description": "+heavy_description",
-		"numboxes": "3",
-		"short": "1"
 	}, {
 		"name": "burglary_gear",
 		"description": "burglary_gear_description",
-		"numboxes": "1"
-	}, {
-		"name": "climbing_gear",
-		"description": "climbing_gear_description",
-		"numboxes": "2"
-	}, {
-		"name": "arcane_implements",
-		"description": "arcane_implements_description",
-		"numboxes": "1"
-	}, {
-		"name": "documents",
-		"description": "documents_description",
-		"numboxes": "1"
-	}, {
-		"name": "subterfuge_supplies",
-		"description": "subterfuge_supplies_description",
 		"numboxes": "1"
 	}, {
 		"name": "demolition_tools",
@@ -1076,8 +1241,16 @@
 		"description": "tinkering_tools_description",
 		"numboxes": "1"
 	}, {
-		"name": "lantern",
-		"description": "lantern_description",
+		"name": "climbing_gear",
+		"description": "climbing_gear_description",
+		"numboxes": "2"
+	}, {
+		"name": "subterfuge_supplies",
+		"description": "subterfuge_supplies_description",
+		"numboxes": "1"
+	}, {
+		"name": "documents",
+		"description": "documents_description",
 		"numboxes": "1"
 	}],
 	"alchemicals": ["alcahest", "binding_oil", "drift_oil", "drown_powder", "eyeblind_poison", "fire_oil", "grenade", "quicksilver", "skullfire_poison", "smoke_bomb", "spark_drug", "standstill_poison", "trance_powder"],
@@ -1092,7 +1265,7 @@
 		"factions5_header": "factions5",
 		"friends_title": "friends",
 		"setting_stress_label": "stress",
-		"setting_trauma_label": "trauma",
+		"setting_trauma_label": "scandals",
 		"upgrade_6_name": "carriage",
 		"upgrade_6_description": "upgrade_carriage_description",
 		"upgrade_7_name": "documents",
@@ -1130,10 +1303,10 @@
 		"upgrade_24_name": "mastery",
 		"upgrade_24_description": "upgrade_mastery_description",
 		"xp_condition2": "xp_beliefs",
-		"xp_condition3": "xp_vice"
+		"xp_condition3": "xp_scandal"
 	},
 	"defaultValues": {
-		"attune": "0",
+		"channel": "0",
 		"claim_bridge_10_15": "1",
 		"claim_bridge_12_13": "1",
 		"claim_bridge_13_14": "1",
@@ -1148,9 +1321,9 @@
 		"cohort1_type": "gang",
 		"command": "0",
 		"consort": "0",
-		"finesse": "0",
+		"maneuver": "0",
 		"hunt": "0",
-		"prowl": "0",
+		"skulk": "0",
 		"setting_extra_stress": "0",
 		"setting_load_h": "6",
 		"setting_show_deity": "0",

@@ -496,6 +496,9 @@ textarea.sheet-smallcaps {
 .sheet-playbookitems {
 	background: $lightest;
 }
+.sheet-specialpermissions {
+	background: $lightest;
+}
 .sheet-regularitems {
 	.repcontainer {
 		display: flex;
@@ -513,7 +516,7 @@ textarea.sheet-smallcaps {
 		position: relative;
 	}
 }
-.sheet-item {
+.sheet-item, .sheet-permission {
 	display: flex;
 	align-items: start;
 
@@ -604,6 +607,9 @@ textarea.sheet-smallcaps {
 .sheet-show-itemdesc[value="0"] ~ div .sheet-item-description {
 	display: none;
 }
+.sheet-show-itemdesc[value="0"] ~ div .sheet-permission-description {
+	display: none;
+}
 .sheet-itemholder .sheet-expand {
 	top: 4px;
 	right: 1px;
@@ -625,7 +631,7 @@ textarea.sheet-smallcaps {
 		height: 49px;
 	}
 }
-.sheet-itemholder .sheet-playbookitems .sheet-expand ~ textarea {
+.sheet-itemholder .sheet-playbookitems .sheet-specialpermissions .sheet-expand ~ textarea {
 	border-color: $versiongrey;
 }
 /* LOGO */
@@ -645,7 +651,8 @@ textarea.sheet-smallcaps {
 }
 /* LOAD */
 .sheet-itemheader,
-.sheet-loadheader {
+.sheet-loadheader,
+.sheet-specialpermissionsheader {
 	background: $darkgrey;
 	height: 20px;
 	font-size: 10px;
@@ -665,7 +672,27 @@ textarea.sheet-smallcaps {
 	font-size: 12px;
 	margin: 0 3px 0 4px;
 }
+
 .sheet-itemheader {
+	> .sheet-label {
+		margin-right: 4px;
+	}
+	&:not(:hover) .sheet-text-button {
+		display: none;
+	}
+	.sheet-text-button {
+		margin-left: auto;
+		input[type=checkbox] + span {
+			opacity: 1;
+			color: $fontblack;
+		}
+		&:hover input[type=checkbox] + span {
+			color: red;
+		}
+	}
+}
+
+.sheet-specialpermissionsheader {
 	> .sheet-label {
 		margin-right: 4px;
 	}
@@ -1817,8 +1844,22 @@ input.sheet-zero {
 	height: 378px;
 	min-height: 378px;
 }
+.sheet-lovenotes {
+	margin-left: 1%;
+	font-family: "Shadows Into Light", cursive;
+	color: $redtext;
+	font-size: 20px;
+	width: 98%;
+	background: linear-gradient(transparent 26px,#a7a7a7 1px) 0 0 / 100% 27px;
+	line-height: 27px;
+	height: 200px;
+	min-height: 200px;
+}
 .sheet-type-character, .sheet-type-crew {
 	.sheet-notes {
+	margin-top: 15px;
+	}
+	.sheet-lovenotes {
 	margin-top: 15px;
 	}
 }
