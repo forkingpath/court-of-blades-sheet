@@ -1,6 +1,6 @@
 /* global data, getTranslationByKey, getAttrs, setAttrs, on, getSectionIDs, generateRowID, removeRepeatingRow */
 const sheetVersion = "1.0";
-const sheetName = "Blades in the Dark";
+const sheetName = "Court of Blades";
 const getTranslation = (key) => (getTranslationByKey(key) || "NO_TRANSLATION_FOUND");
 /* It's necessary to include the base data at the start of the file */
 /* Translate all the data */
@@ -262,6 +262,7 @@ const crewAttributes = [...new Set([].concat(...Object.keys(data.crew).map(x => 
 		"repeating_crewability:name",
 		"repeating_crewability:description",
 		"repeating_permissionitem:name",
+		"repeating_permissionitem:description",
 		"repeating_playbookitem:name",
 		"repeating_upgrade:name",
 		"repeating_friend:name",
@@ -570,7 +571,7 @@ on("sheet:opened", () => {
 				console.log(`Found version ${version}.`);
 			},
 			initialiseSheet = () => {
-				const setting = ["ability", "friend", "crewability", "contact", "playbookitem", "upgrade", "framefeature"]
+				const setting = ["ability", "friend", "crewability", "contact", "playbookitem", "permissionitem", "upgrade", "framefeature"]
 					.reduce((memo, sectionName) => {
 						memo[`repeating_${sectionName}_${generateRowID()}_autogen`] = 1;
 						return memo;

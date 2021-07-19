@@ -638,7 +638,7 @@ textarea.sheet-smallcaps {
 .sheet-bladeslogo {
 	border-right: 12px solid transparent;
 	height: 43px;
-	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/logo.png');
+	background-image: url('https://raw.githubusercontent.com/karlnp/court-of-blades-sheet/master/courtofblades.png');
 	background-size: 102% auto;
 	background-repeat: no-repeat;
 }
@@ -664,7 +664,8 @@ textarea.sheet-smallcaps {
 	line-height: 11px;
 	font-style: italic;
 	margin-left: auto;
-	text-transform: lowercase;
+	margin-right: auto;
+	text-transform: capitalize;
 }
 .sheet-loadnumber {
 	font-weight: bold;
@@ -1811,7 +1812,7 @@ input.sheet-zero {
 	position: relative;
 }
 .sheet-crewcoin1 {
-	width: 26%;
+	width: 35%;
 }
 .sheet-regulartooth + span,
 .sheet-rep .sheet-tooth + span,

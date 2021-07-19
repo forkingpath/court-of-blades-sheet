@@ -828,7 +828,7 @@
 				"bold": "1",
 				"name": "playbook_item_fine_ranged_weapon",
 				"description": "playbook_item_fine_courtly_blade_description",
-				"numboxes": "0"
+				"numboxes": "2"
 			}, {
 				"bold": "1",
 				"name": "playbook_item_fine_heavy_cloak",
@@ -877,13 +877,14 @@
 			}, {
 				"bold": "1",
 				"name": "playbook_item_fine_lockpicks",
-				"description": "playbook_item_fine_lockpicks",
+				"description": "playbook_item_fine_lockpicks_description",
 				"numboxes": "1"
 			}, {
 				"name": "playbook_item_polished_mirror",
 				"description": "playbook_item_polished_mirror_description",
 				"numboxes": "1"
 			}, {
+				"bold": "1",
 				"name": "playbook_item_fine_cover_identity",
 				"description": "playbook_item_fine_cover_identity_description",
 				"numboxes": "0"
@@ -918,7 +919,7 @@
 				"bold": "1",
 				"name": "playbook_item_fine_arcane_focus",
 				"description": "playbook_item_fine_arcane_focus_description",
-				"numboxes": "0"
+				"numboxes": "1"
 			}, {
 				"name": "playbook_item_an_impressive_costume",
 				"description": "playbook_item_an_impressive_costume_description",
@@ -1007,7 +1008,7 @@
 			"playbookitem": [{
 				"name": "playbook_item_a_frightening_weapon",
 				"description": "playbook_item_a_frightening_weapon_description",
-				"numboxes": "1"
+				"numboxes": "2"
 			}, {
 				"bold": "1",
 				"name": "playbook_item_fine_wrecking_tools",
@@ -1237,6 +1238,10 @@
 		"description": "demolition_tools_description",
 		"numboxes": "2"
 	}, {
+		"name": "arcane_implements",
+		"description": "arcane_implements_description",
+		"numboxes": "1"
+	}, {
 		"name": "tinkering_tools",
 		"description": "tinkering_tools_description",
 		"numboxes": "1"
@@ -1325,7 +1330,9 @@
 		"hunt": "0",
 		"skulk": "0",
 		"setting_extra_stress": "0",
-		"setting_load_h": "6",
+		"setting_load_l": "3",
+		"setting_load_n": "6",
+		"setting_load_h": "7",
 		"setting_show_deity": "0",
 		"setting_show_frame": "0",
 		"setting_show_origin": "0",

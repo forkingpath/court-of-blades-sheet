@@ -250,7 +250,8 @@
 			// Load
 			.loadheader.flex.col100
 				.label(data-i18n='load')
-				each val in ['light', 'normal', 'heavy']
+				//TODO: Make this a setting in the setting menu to enable regular Blades play
+				each val in ['light', 'normal']
 					label
 						+checkbox('load')(value=val).checkbox
 						span.loadnumber(name=`attr_setting_load_${val[0]}`)

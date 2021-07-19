@@ -25,20 +25,18 @@ mixin makefactions(number, title)
 	.factions.flex.free-repcontrol
 		.col24b
 			+makefactions(1, 'factions1')
+			+makefactions(3, 'factions3').sheet-def-margin
 		.col24b
 			+makefactions(2, 'factions2')
 		.col24b
-			+makefactions(3, 'factions3')
-			+makefactions(4, 'factions4').sheet-def-margin
+			+makefactions(4, 'factions4')
 			.warblurb.def-margin
 				.label(data-i18n='war')
 				ul
 					li.nondot(data-i18n='warblurb1')
-					li(data-i18n='warblurb2')
 					li(data-i18n='warblurb3')
 					li(data-i18n='warblurb4')
-					li(data-i18n='warblurb5')
-	.clocks.col55.free-repcontrol
+	.clocks.col55.free-repcontrol.sheet-def-margin
 		.specialheader.label(data-i18n='clocks')
 		fieldset.repeating_factionclock
 			+makeclock
