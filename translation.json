@@ -632,7 +632,7 @@
     "occult": "Arcane",
     "ok": "OK",
     "origin": "Origin",
-    "paramour": "Paramour & Bonds",
+    "paramour": "Paramour",
     "paranoid": "Paranoid",
     "personal": "Personal",
     "planning_load": "Planning &amp; Load",
@@ -1298,5 +1298,8 @@
     "xp_specific_extra": "Enter another specific way to mark XP here.",
     "xp_top": "At the end of each session, for each item below, mark 1 xp (or instead mark 2 xp if that item occurred multiple times).",
     "xp_vice": "You struggled with issues from your vice or traumas during the session.",
-    "zerodice": "Zero Dice — take the lowest result above"
+    "zerodice": "Zero Dice — take the lowest result above",
+    "paramour_heat_label": "Heat",
+    "bond_notes": "Bonds",
+    "paramour_name": "Paramour Name"
 }

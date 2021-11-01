@@ -179,7 +179,7 @@
 				.xpholder.flex
 					//- generates 8 xp boxes
 					+radio('playbook_xp')(value='0', checked).tooth.zero
-					each num in range(1,8)
+					each num in range(1,10)
 						+radio('playbook_xp')(value=num).tooth.xptooth
 			ul.advancement-desc
 				li(data-i18n='xp_desperate')
@@ -233,7 +233,19 @@
 								+checkbox(`stricture_${name}`).checkbox.squarebox
 								span.label(data-i18n=name)
 							span(data-i18n=`strictures_${name}`)
-		+textarea('paramour')(data-i18n-placeholder='paramour').lovenotes
+		.col100.def-margin
+			.paramour.col100.flex
+				.plainheader
+			.paramour-row.flex
+				label.col55.header
+					+text-input('paramour_name')
+					.label.text.title(data-i18n='paramour')
+				.coinrow.xpholder.flex
+					.label(data-i18n="paramour_heat_label").col37
+					+radio('paramour_heat')(value='0', checked).tooth.zero
+					each num in range(1,6)
+						+radio('paramour_heat')(value=num).tooth.xptooth
+		+textarea('bond_notes')(data-i18n-placeholder='bond_notes').lovenotes
 	// Right column
 	.col45.flex-wrap.right-column
 		// Playbook name and description
@@ -403,11 +415,11 @@
 							'{{resist=1}} {{subtitle=^{resists} @{consequence_query} ^{with}}} {{title=^{'+attribute+'}}} @{'+attribute+'_formula}')(data-i18n=attribute, data-i18n-title=`${attribute}_description`).rollbutton.label
 						+hidden-input(`${attribute}`)(value='0')
 						+hidden-input(`${attribute}_formula`)(value=zerodiceFormula)
-						+hidden-input(`${attribute}_xp_max`)(value='6')
+						+hidden-input(`${attribute}_xp_max`)(value='8')
 						.attribute-xp-box.flex
-							//- generate 6 xp boxes
+							//- generate 8 xp boxes
 							+radio(`${attribute}_xp`)(value='0', checked).tooth.zero
-							each num in range(1,6)
+							each num in range(1,8)
 								+radio(`${attribute}_xp`)(value=num).tooth.xptooth
 					.actions.col100
 						each action in actions
